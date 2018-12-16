@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "Pão italiano",
+      "price": 12.90,
+      "description": "Embalagem de 500g"
+    },
+    {
+      "name": "Pão de brioche",
+      "price": 15.32,
+      "description": "Embalagem de 200g"
+    },
+    {
+      "name": "Hamburguer de costela",
+      "price": 15.32,
+      "description": null
+    },
+    {
+      "name": "Hamburguer de soja",
+      "price": 15.32,
+      "description": "Em promoção"
+    },
+    {
+      "name": "Alface",
+      "price": 15.32,
+      "description": null
+    }
+  ]
+}
