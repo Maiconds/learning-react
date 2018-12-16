@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Product from '../product/Product';
 
 class ProductRegister extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class ProductRegister extends Component {
   }
 
   render() {
-    const { name, price, description } = this.state;
+    const { name, price, description, products } = this.state;
     return(
       <div>
         <p>
@@ -52,6 +53,11 @@ class ProductRegister extends Component {
         <p>
           <button type="button" onClick={this.addProduct} >Adicionar</button>
         </p>
+        {
+          products.map(({ name, price, description }, index) => (
+            <Product key={index} name={name} price={price} description={description} />
+          ))
+        }
       </div>
     );
   }
