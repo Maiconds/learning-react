@@ -9,7 +9,8 @@ class ProductRegister extends Component {
       name: '',
       price: 0,
       description: '',
-      products: []
+      products: [],
+      showPrices: true
     };
   }
 
@@ -45,8 +46,14 @@ class ProductRegister extends Component {
 
   }
 
+  changeShowPrice = () => {
+    this.setState(state => ({
+      showPrices: !state.showPrices
+    }));
+  }
+
   render() {
-    const { name, price, description, products } = this.state;
+    const { name, price, description, products, showPrices } = this.state;
     return(
       <div>
         <p>
@@ -61,9 +68,12 @@ class ProductRegister extends Component {
         <p>
           <button type="button" onClick={this.addProduct} >Adicionar</button>
         </p>
+        <p>
+          <input type="checkbox" checked={showPrices} onChange={this.changeShowPrice} />Show Prices
+        </p>
         {
           products.map(({ name, price, description }, index) => (
-            <Product key={index} name={name} price={price} description={description} />
+            <Product key={index} name={name} price={price} description={description} showPrice={showPrices} />
           ))
         }
       </div>

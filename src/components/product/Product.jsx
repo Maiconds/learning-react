@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Product = ({ name, price, description }) => (
+const Product = ({ name, price, description, showPrice }) => (
   <div>
     <p>{name}</p>
-    <p>{price}</p>
+    { showPrice ? <p>{price}</p> : null}
     <p>{description}</p>
   </div>
 );
@@ -12,7 +12,8 @@ const Product = ({ name, price, description }) => (
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  description: PropTypes.string
+  description: PropTypes.string,
+  showPrice: PropTypes.bool.isRequired
 };
 
 export default Product; 
