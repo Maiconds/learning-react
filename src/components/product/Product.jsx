@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Product = ({ name, price, description, showPrice }) => (
   <div>
-    <p>{name}</p>
-    { showPrice ? <p>{price}</p> : null}
-    <p>{description}</p>
+    <p className="product-name">{name}</p>
+    { showPrice ? <p className="product-price">{price}</p> : null}
+    <p className="product-description">{description}</p>
   </div>
 );
 

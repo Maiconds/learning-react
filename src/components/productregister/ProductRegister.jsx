@@ -57,19 +57,19 @@ class ProductRegister extends Component {
     return(
       <div>
         <p>
-          Nome: <input type="text" value={name} onChange={e => this.change(e, 'name')} />
+          Nome: <input type="text" name="name" value={name} onChange={e => this.change(e, 'name')} />
         </p>
         <p>
-          Preço: <input type="text" value={price.toString()} onChange={e => this.change(e, 'price')} />
+          Preço: <input type="text" name="price" value={price.toString()} onChange={e => this.change(e, 'price')} />
         </p>
         <p>
-          Descrição: <input type="text" value={description} onChange={e => this.change(e, 'description')} />
+          Descrição: <input type="text" name="description" value={description} onChange={e => this.change(e, 'description')} />
         </p>
         <p>
           <button type="button" onClick={this.addProduct} >Adicionar</button>
         </p>
         <p>
-          <input type="checkbox" checked={showPrices} onChange={this.changeShowPrice} />Show Prices
+          <input type="checkbox" name="showPrices" checked={showPrices} onChange={this.changeShowPrice} />Show Prices
         </p>
         {
           products.map(({ name, price, description }, index) => (
