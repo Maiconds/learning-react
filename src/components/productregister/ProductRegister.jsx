@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Product from '../product/Product';
+import { getAllProducts } from '../../services/productServices';
 
 class ProductRegister extends Component {
   constructor(props) {
@@ -10,6 +11,13 @@ class ProductRegister extends Component {
       description: '',
       products: []
     };
+  }
+
+  componentDidMount() {
+    getAllProducts()
+      .then(products => this.setState({
+        products
+      }));
   }
 
   change = (e, field) => {
