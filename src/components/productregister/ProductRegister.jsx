@@ -21,9 +21,11 @@ class ProductRegister extends Component {
       });
      }
   }
+
    addProduct = () => {
     const { name, price, description } = this.state;
-     if (name !== '' && price !== 0) {
+
+    if (name !== '' && price !== 0) {
       this.setState(state => ({
         name: '',
         price: 0,
@@ -31,8 +33,10 @@ class ProductRegister extends Component {
         products: [...state.products, { name, price, description }]
       }));
     }
+
   }
-   render() {
+
+  render() {
     const { name, price, description } = this.state;
     return(
       <div>
@@ -51,6 +55,7 @@ class ProductRegister extends Component {
       </div>
     );
   }
+
  }
 
  export default ProductRegister;
