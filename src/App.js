@@ -1,8 +1,8 @@
 import React from 'react';
-import Product from './components/product/Product';
+import ProductRegister from './components/productregister/ProductRegister';
 
 const App = () => (
-  <Product name="Arroz" price={10} />
+  <ProductRegister />
 );
 
 export default App;
