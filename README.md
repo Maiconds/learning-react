@@ -1,5 +1,5 @@
-# learning-react
-Project to learn basic React JS concepts.
+# eva-poc-react
+Project to train React JS concepts used at EVA and ADAO projects.
 
 To start the application, on `src` directory:
 - run `npm start` to start the application;
