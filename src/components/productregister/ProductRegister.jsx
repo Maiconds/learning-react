@@ -1,5 +1,5 @@
-import { React, Component }  from 'react';
-import { isNaN } from 'lodash';
+import  React, { Component }  from 'react';
+import Product from '../product/Product';
 
 class ProductRegister extends Component {
     constructor(props){
@@ -11,82 +11,46 @@ class ProductRegister extends Component {
             description: '',
             products: []
         }
-    }
+        
+        this.change = this.change.bind(this);
+        this.save = this.save.bind(this);
 
-    changeName(name){
-        this.setState({
-            name: name
-        });
-    }
-
-    changePrice(price){
-        if(isNaN(price)){
-            this.setState({
-                price: 0
-            });
-        }
-        else {
-            this.setState({
-                price: price
-            });
-        }
-    }
-
-    changeDescription(description){
-        this.setState({
-            description: description.push(description)
-        });
-    }
-
-    changeProduct(products){
-        this.setState({
-            products: this.products
-        });
     }
 
     change(e, field) {
-        const {value} = e.target.value;      
-        if(field === 'name' && value != ''){
+        e.preventDefault();
+        const value = e.target.value;
+        const isPrice = field === 'price';
+        if(!(isNaN(value) && isPrice)){
             this.setState({
-                name: value 
-             });
-        }
-
-        else if(field === 'price' && value != 0){
-            this.setState({
-               price: value 
-            });
-        }
-
-        else if(field ==='description'){
-            this.setState({
-                description: value 
-             });
-        }
+                [field]: field==='price'? value==='' ? 0 : parseFloat(value) : value         
+            })
+        }      
     }
 
     save(){
         const {name, price, description} = this.state;
 
-        this.setState({
-            products: [{name, price, description}]
-        });
-
-        this.setState = {
-            name: '',
-            price: 0,
-            description: ''
+        if(name !== '' && price!==0){
+            this.setState(state => ({
+                name: '',
+                price: 0,
+                description: '',
+                products: [...state.products, { name, price, description }]
+              }));
         }
     }
 
     render(){
-        const {name, price, description} = this.state;
+        const {name, price, description, products} = this.state;
         return(
             <div>
-               Nome: <input type="text" value={name} onChange={e => this.change(e, 'name')} />
-               Price: <input type="text" value={price} onChange={e => this.change(e, 'price')}/>
-               Description: <input type="text" value={description} onChange={e => this.change(e, 'description')}/>
+               Nome: <input type="text" name="name" value={name} onChange={e => this.change(e, 'name')} />
+               Price: <input type="text" value={price} name="price" onChange={e => this.change(e, 'price')}/>
+               Description: <input type="text" value={description} name="description" onChange={e => this.change(e, 'description')}/><br/><br/>
                <button onClick={this.save}>Salvar</button>
+               <h1>Products List:</h1>
+               {products.map(product => <Product name={product.name} price={product.price} description={product.description}/>)}
             </div>
         );
     }
