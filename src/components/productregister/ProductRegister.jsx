@@ -15,7 +15,7 @@ class ProductRegister extends Component {
 
     changeName(name){
         this.setState({
-            name: this.name
+            name: name
         });
     }
 
@@ -27,14 +27,14 @@ class ProductRegister extends Component {
         }
         else {
             this.setState({
-                price: this.price
+                price: price
             });
         }
     }
 
     changeDescription(description){
         this.setState({
-            description: description.push(this.description)
+            description: description.push(description)
         });
     }
 
@@ -48,17 +48,17 @@ class ProductRegister extends Component {
         const {value} = e.target.value;      
         if(field === 'name' && value != ''){
             this.setState({
-                [field]: value 
+                name: value 
              });
         }
 
-        if(field === 'price' && value != 0){
+        else if(field === 'price' && value != 0){
             this.setState({
-               [field]: value 
+               price: value 
             });
         }
 
-        else {
+        else if(field ==='description'){
             this.setState({
                 description: value 
              });
@@ -72,7 +72,7 @@ class ProductRegister extends Component {
             products: [{name, price, description}]
         });
 
-        this.state = {
+        this.setState = {
             name: '',
             price: 0,
             description: ''
