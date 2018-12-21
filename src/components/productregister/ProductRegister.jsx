@@ -1,5 +1,6 @@
 import  React, { Component }  from 'react';
 import Product from '../product/Product';
+import { getAllProducts } from '../../services/productServices';
 
 class ProductRegister extends Component {
     constructor(props){
@@ -15,6 +16,14 @@ class ProductRegister extends Component {
         this.change = this.change.bind(this);
         this.save = this.save.bind(this);
 
+    }
+
+    componentDidMount(){
+        getAllProducts().then( 
+            json => this.setState({
+                products: json
+            })
+        ).catch(window.console.log("Erro ao carregar dados"))
     }
 
     change(e, field) {
