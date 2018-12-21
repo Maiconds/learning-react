@@ -10,7 +10,8 @@ class ProductRegister extends Component {
             name: '',
             price: 0,
             description: '',
-            products: []
+            products: [],
+            showPrice: true
         }
         
         this.change = this.change.bind(this);
@@ -50,16 +51,24 @@ class ProductRegister extends Component {
         }
     }
 
+    changeShowPrice = () => {
+        this.setState( ({showPrice}) => ({
+            showPrice: !showPrice 
+        }))
+    }
+
     render(){
-        const {name, price, description, products} = this.state;
+        const {name, price, description, products, showPrice} = this.state;
         return(
             <div>
                Nome: <input type="text" name="name" value={name} onChange={e => this.change(e, 'name')} />
                Price: <input type="text" value={price} name="price" onChange={e => this.change(e, 'price')}/>
-               Description: <input type="text" value={description} name="description" onChange={e => this.change(e, 'description')}/><br/><br/>
+               Description: <input type="text" value={description} name="description" onChange={e => this.change(e, 'description')}/>
+               Show Prices: <input type="checkbox" name="showPrices" onChange={this.changeShowPrice} checked={showPrice}/><br/><br/>
                <button onClick={this.save}>Salvar</button>
                <h1>Products List:</h1>
-               {products.map(product => <Product name={product.name} price={product.price} description={product.description}/>)}
+               {products.map(product => <Product name={product.name} price={product.price} description={product.description}
+               showPrice={showPrice}/>)}
             </div>
         );
     }
