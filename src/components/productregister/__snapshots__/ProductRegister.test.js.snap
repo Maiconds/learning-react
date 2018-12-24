@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductRegister component test Snapshot test Should mactch the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductRegister />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        "Nome: ",
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        "Price: ",
+        <input
+          name="price"
+          onChange={[Function]}
+          type="text"
+          value={0}
+        />,
+        "Description: ",
+        <input
+          name="description"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        "Filter: ",
+        <input
+          name="filter"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />,
+        "Show Prices: ",
+        <input
+          checked={true}
+          name="showPrices"
+          onChange={[Function]}
+          type="checkbox"
+        />,
+        <br />,
+        <br />,
+        <button
+          onClick={[Function]}
+        >
+          Salvar
+        </button>,
+        <h1>
+          Products List:
+        </h1>,
+        Array [],
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      "Nome: ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "name",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      "Price: ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "price",
+          "onChange": [Function],
+          "type": "text",
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      "Description: ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "description",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      "Filter: ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "filter",
+          "onChange": [Function],
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      "Show Prices: ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "checked": true,
+          "name": "showPrices",
+          "onChange": [Function],
+          "type": "checkbox",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Salvar",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Salvar",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Products List:",
+        },
+        "ref": null,
+        "rendered": "Products List:",
+        "type": "h1",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          "Nome: ",
+          <input
+            name="name"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          "Price: ",
+          <input
+            name="price"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />,
+          "Description: ",
+          <input
+            name="description"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          "Filter: ",
+          <input
+            name="filter"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />,
+          "Show Prices: ",
+          <input
+            checked={true}
+            name="showPrices"
+            onChange={[Function]}
+            type="checkbox"
+          />,
+          <br />,
+          <br />,
+          <button
+            onClick={[Function]}
+          >
+            Salvar
+          </button>,
+          <h1>
+            Products List:
+          </h1>,
+          Array [],
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        "Nome: ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "name",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "Price: ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "price",
+            "onChange": [Function],
+            "type": "text",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "Description: ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "description",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "Filter: ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "filter",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "Show Prices: ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "checked": true,
+            "name": "showPrices",
+            "onChange": [Function],
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Salvar",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Salvar",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Products List:",
+          },
+          "ref": null,
+          "rendered": "Products List:",
+          "type": "h1",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
