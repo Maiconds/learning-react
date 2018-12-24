@@ -5,9 +5,9 @@ const Product = (props) => {
     const {name, price, description, showPrice} = props;
     return (
         <div>
-           <p>Nome: {name}</p>
-           {showPrice? <p>Preço: {price}</p> : null }
-           <p>Descrição: {description}</p>
+           Nome:<p className={'product-name'}>{name}</p>
+           {showPrice? <p className={'product-price'}>Preço: {price}</p> : null }
+           Descrição:  <p className={'product-description'}>{description}</p>
         </div>
     )};
 

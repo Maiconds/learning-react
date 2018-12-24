@@ -7,6 +7,7 @@ ShallowWrapper {
     description="refrigerante"
     name="Itubaina"
     price={5}
+    showPrice={true}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -22,52 +23,70 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <p>
-          Nome: 
+        "Nome:",
+        <p
+          className="product-name"
+        >
           Itubaina
         </p>,
-        null,
-        <p>
-          Descrição: 
+        <p
+          className="product-price"
+        >
+          Preço: 
+          5
+        </p>,
+        "Descrição:  ",
+        <p
+          className="product-description"
+        >
           refrigerante
         </p>,
       ],
     },
     "ref": null,
     "rendered": Array [
+      "Nome:",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Itubaina",
+          "className": "product-name",
+        },
+        "ref": null,
+        "rendered": "Itubaina",
+        "type": "p",
+      },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Nome: ",
-            "Itubaina",
+            "Preço: ",
+            5,
           ],
+          "className": "product-price",
         },
         "ref": null,
         "rendered": Array [
-          "Nome: ",
-          "Itubaina",
+          "Preço: ",
+          5,
         ],
         "type": "p",
       },
-      null,
+      "Descrição:  ",
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Descrição: ",
-            "refrigerante",
-          ],
+          "children": "refrigerante",
+          "className": "product-description",
         },
         "ref": null,
-        "rendered": Array [
-          "Descrição: ",
-          "refrigerante",
-        ],
+        "rendered": "refrigerante",
         "type": "p",
       },
     ],
@@ -80,52 +99,70 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <p>
-            Nome: 
+          "Nome:",
+          <p
+            className="product-name"
+          >
             Itubaina
           </p>,
-          null,
-          <p>
-            Descrição: 
+          <p
+            className="product-price"
+          >
+            Preço: 
+            5
+          </p>,
+          "Descrição:  ",
+          <p
+            className="product-description"
+          >
             refrigerante
           </p>,
         ],
       },
       "ref": null,
       "rendered": Array [
+        "Nome:",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Itubaina",
+            "className": "product-name",
+          },
+          "ref": null,
+          "rendered": "Itubaina",
+          "type": "p",
+        },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Nome: ",
-              "Itubaina",
+              "Preço: ",
+              5,
             ],
+            "className": "product-price",
           },
           "ref": null,
           "rendered": Array [
-            "Nome: ",
-            "Itubaina",
+            "Preço: ",
+            5,
           ],
           "type": "p",
         },
-        null,
+        "Descrição:  ",
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Descrição: ",
-              "refrigerante",
-            ],
+            "children": "refrigerante",
+            "className": "product-description",
           },
           "ref": null,
-          "rendered": Array [
-            "Descrição: ",
-            "refrigerante",
-          ],
+          "rendered": "refrigerante",
           "type": "p",
         },
       ],
