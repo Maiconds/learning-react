@@ -11,7 +11,8 @@ class ProductRegister extends Component {
             price: 0,
             description: '',
             products: [],
-            showPrice: true
+            showPrice: true,
+            filter: ''
         }
         
         this.change = this.change.bind(this);
@@ -58,17 +59,19 @@ class ProductRegister extends Component {
     }
 
     render(){
-        const {name, price, description, products, showPrice} = this.state;
+        const {name, price, description, products, showPrice, filter} = this.state;
         return(
             <div>
                Nome: <input type="text" name="name" value={name} onChange={e => this.change(e, 'name')} />
                Price: <input type="text" value={price} name="price" onChange={e => this.change(e, 'price')}/>
                Description: <input type="text" value={description} name="description" onChange={e => this.change(e, 'description')}/>
+               Filter: <input type="text" value={filter} name="filter" onChange={e => this.change(e, 'filter')}/>
                Show Prices: <input type="checkbox" name="showPrices" onChange={this.changeShowPrice} checked={showPrice}/><br/><br/>
                <button onClick={this.save}>Salvar</button>
                <h1>Products List:</h1>
-               {products.map(product => <Product name={product.name} price={product.price} description={product.description}
-               showPrice={showPrice}/>)}
+               {products.map(product => product.name.includes(filter)? 
+               <Product name={product.name} price={product.price} description={product.description}
+               showPrice={showPrice}/> :null)}
             </div>
         );
     }
