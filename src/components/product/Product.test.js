@@ -52,4 +52,25 @@ describe('Product component test', () => {
             //expect(component.find('.product-price').props().children).toBe(price);
         });
     });
+
+    describe('Render without price', () => {
+
+        const productName = 'Itubaina';
+        const description = 'Refrigerante';
+
+        const componentShowPriceFalse = shallow(<Product name={productName} price={price} description={description} 
+            showPrice={false}/>);
+
+        it('Should render the product name', () => {
+            expect(componentShowPriceFalse.find('.product-name').props().children).toBe(productName);
+        });
+
+        it('Should render the product description', () => {
+            expect(componentShowPriceFalse.find('.product-description').props().children).toBe(description);
+        });
+
+        it('Should not render the price', () => {
+            expect(componentShowPriceFalse.find('.product-price').children()).toHaveLength(0);
+        });
+    });
 });
